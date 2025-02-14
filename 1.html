@@ -1,0 +1,56 @@
+<!-- /QUE.1.What is the default position of an element in CSS?  
+ The defult position is position:static;
+ It does not get affected by the top, right, bottom, or left properties.
+ It appears in the layout exactly where it would naturally be placed within the document, based on the order of elements in the HTML.
+ /QUE.2.Explain the difference between `relative`, `absolute`, `fixed`, and `sticky` positioning. 
+ Position: Relative is given in parent tag. you can use this property for give position on page.
+ Position: absolute is given in child tag. you can use this property for give position on page.
+ Position: fixed is given in tag. you can use this property for Fixed div on page.
+ Position: sticky is given in tag. you can use this property for Fixed div in the maindiv on page.
+
+ /QUE.3.:-What is `z-index`, and how does it work?  
+
+ -- The z-index property in CSS controls the stacking order of elements on a web page. It determines which elements are displayed in front of or behind others when they overlap.
+ -- By default, elements are stacked in the order in which they appear in the HTML. The first element in the HTML will be "under" the next one, and so on.
+ --When elements overlap, the element with the higher z-index will be displayed in front of the one with a lower z-index.
+ --A number that represents the stacking order. Positive values stack elements in front, negative values send them behind.
+  
+ /QUE.4.What are the different values of the `overflow` property, and what do they do?  
+
+ --The overflow property in CSS is used to control how content that overflows an element’s box
+
+ Possible Values of the overflow Property:-
+
+ visible (default):-
+
+ --Content is not clipped and will overflow outside the element's box if it doesn't fit.
+It allows content to spill out of its container. 
+ 
+hidden:-
+
+The content that overflows the element’s box is clipped and not visible. The overflowed content is simply hidden, and no scrollbars are provided to view it.
+
+ Used when you don’t want to show overflow content at all.
+
+ scroll:-
+
+ The element will always show scrollbars, regardless of whether or not the content overflows. The scrollbars can be used to navigate the overflowed content.
+ Used when you want scrollbars to appear in the container for scrolling through content, even if the content doesn’t overflow. This ensures the scrollbars are always visible.
+
+
+ /QUE.5. When should we use `position: fixed;` instead of `position: absolute;`?
+
+ position: fixed:-
+
+ An element with position: fixed; is positioned relative to the viewport It does not have parent tag.
+
+ It remains fixed in place even when the page is scrolled.
+
+ position: absolute;
+
+ --An element with position: absolute; is positioned relative to the viewport It  have parent tag.
+ Position absolute is use to give position child div in the parent tag. 
+ when user give absolute to any div that div can not go outside of parent div or which dic user gave position relative.
+
+
+-->

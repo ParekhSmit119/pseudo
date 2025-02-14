@@ -1,0 +1,164 @@
+<!-- QUE. 1. What are `::before` and `::after` pseudo-elements?  
+ Answer:-The ::before and ::after pseudo-elements is used to insert content into a page before or after the content of an element, 
+ This type of element is use decorate the content without change in html code.
+ ::before Pseudo-element:- 
+ --- This element is use to insert  symbol,image or text before the any data or element.
+ ::after Pseudo-element:
+ --- This element is use to insert  symbol,image or text After the any data or element. 
+ 
+ /QUE.2.How do transitions work in CSS?  
+ --- Transitions Property Use For Change property Values with Ease and give Smooth Animation.
+ There are 5 timing function.
+ 1. Liner
+ 2.ease
+ 3. ease in
+ 4. ease out
+ 5.ease-in-out
+ 
+ /QUE.3.Explain `transition-duration`, `timing-function`, `transition-delay`, and `transition-property`
+ Answer.
+ transition-duration:-
+ ---This proprty is use for  how long the transition takes to complete.
+ --- this propert value is given in seconds.
+ transition-timing-function:-
+ ---This propert is use for define the speed curve of the transition.
+ there are 5 types of timing-function.
+ 1. Liner
+ 2. Ease
+ 3.Ease in
+ 4.Ease out
+ 5.Ease-in-out
+ transition-delay:-
+ This property use for define the delay of transition.
+ This property's time specified in seconds.
+transition-property:-
+--- This property use for which css property will applt the transition.
+--- define the css you can enter property name for apply transition.or you can use 'all' property to apply change in all property. 
+
+/QUE.4.What are the differences between `:hover` and `:focus` pseudo-classes? 
+ ---This property is use for display the animation when user's pointer is on the property.
+ :hover Pseudo-Class:-
+ This property is use when an element is being hovered by the user's pointer.
+ It's commonly used for interactive elements like buttons, links, or images,  when the user hovers their mouse pointer over them.
+
+ :focus Pseudo-Class:-
+ The :focus pseudo-class applies when an element has focus. This typically happens when an element is clicked or navigated to via keyboard.
+ ---It's often used for form elements like inputs, textareas, buttons, and links .
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <style>
+    .navbar{
+        width: 100%;
+        height: 80px;
+        border: 1px solid black;
+        display: flex;
+        background-color: green;
+    }
+    .navbar .navleft{
+        width: 40%;
+        height: inherit;
+        /* border: 1px solid green; */
+    }
+    .navleft h1{
+        width: 40%;
+        padding-inline: 20%;
+
+    }
+    .navleft h1:hover{
+        color: white;
+        background-color: blue;
+    }
+    .navbar .navright{
+        width: 60%;
+        height: inherit;
+        /* border: 1px solid red; */
+        line-height: 80px;
+    }
+    .navright a{
+        text-decoration: none;
+        color: black;
+        margin-left: 19%;
+    }
+    .navright a:hover{
+        color: red;
+        background-color: yellow;
+    }
+    button{
+        width: 200px;
+        height: 50px;
+        margin-left: 45%;
+    }
+    button::after{
+        content: 'here';
+        width: 100px;
+        height: auto;
+        background-color: gray;
+        color: red;
+        text-decoration: underline;
+    }
+    .main{
+        width: 100%;
+        height: 300px;
+        border: 1 px solid red;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        transition: 1s;
+    }
+    .box:hover{
+        cursor: pointer;
+        background-color: blue;
+        transform: skew(20deg);
+        transition-delay: 1s;
+    }
+    input{
+        width: 20%;
+        height: 19px;
+        background-color: blue;
+    }
+    input:hover{
+        background-color: red;
+    }
+    input:focus{
+        font-size: 40px;
+        border: 3px solid black;
+        background-color: yellow;
+    }
+    
+
+ </style>
+ <body>
+    <div class="navbar">
+        <div class="navleft">
+            <h1>T Shop</h1>
+        </div>
+        <div class="navright">
+            <a href="#">Home</a>
+            <a href="#">Service</a>
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+        </div>
+    </div>
+    <hr size="10" color="black"><br><br><br>
+    <button>
+        Click Me
+    </button><br><br><br><br>
+    <hr size="10" color="black"><br><br><br>
+    <div class="main">
+        <div class="box"></div>
+    </div>
+    <hr size="10" color="black"><br><br><br>
+    <label for="name">First Name</label>
+    <input type="text" placeholder="Enter the name"><br><br>
+
+    <a href="1.html">Next</a>
+ </body>
+ </html>
